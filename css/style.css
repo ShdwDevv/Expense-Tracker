@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    padding : 0px;
+    margin : 0px;
+    box-sizing: border-box; /*To get aware from padding and margin issue*/
+    font-family: "Poppins", sans-serif;
+}
+body{
+    width: 100vw;
+    height : 100vh;
+    background-color: #fea49f;
+    margin-top: 80px;
+}
+section{
+    display : flex; /*To make the content placed in center*/
+    align-items: center;
+    justify-content: center;
+}
+.toggle{
+    display : flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 20px;
+    margin : 15px;
+    display: none;
+}
+.word{
+    background-color: #2f3542;
+    padding : 10px;
+    border-radius: 20px;
+}
+.toggle .headline{
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+}
+.active{
+    height: 4px;
+    background-color: dodgerblue;
+    width: 50%;
+}
+.container{
+    width: 800px;
+    height: 600px;
+    background-color: #fff;
+    border-radius: 20px;
+    margin : auto 20px;
+    box-shadow: rgba(0, 0, 0, 0.15) 2px 2px 2.5px; /*Shadow around the box*/
+    display: flex; /*To perform the flex operation in both description adn transaction*/
+    user-select: none; /*So we cant able to select anythong through mouse(copy panna mudiyaadhu)*/
+}
+.display{
+    background-color: #c2dde6;
+    flex: 1;/*To share a equal amount put the flex as one in other class too*/
+    color : #0b749d;
+    padding : 20px;
+    border-radius: 20px;
+}
+.form-control label{
+    font-weight: 600;
+}
+.form-control input{
+    border: none;
+}
+.display h1,h2,h4{
+    font-weight: 600;
+    padding : 5px;
+}
+.inex-box{
+    display: flex;
+    gap : 10px;
+    padding:5px;
+}
+.inex-box div{
+    text-align: center;
+    flex : 1;
+    padding : 20px;
+    font-size: 20px;
+}
+.inex-box p{
+    font-size: 22px;
+}
+.income{
+    color:#078765;
+    border : 3px solid #078765;
+}
+.expense{
+    color:#ee5253;
+    border : 3px solid #ee5253;
+}
+#form{
+    padding: 5px;
+}
+.form-control{
+    margin-top: 10px;
+}
+label{
+    display: inline-block;
+    margin: 10px 10px 10px 0px;
+    font-size: 18px;
+    font-weight: 400;
+}
+form input{
+    display: block;
+    width: 100%;
+    font-size: 16px;
+    padding:10px;
+    border-radius: 2px;
+    outline: none; /*To remove the outline*/
+}
+.btn{
+    display: block;
+    width: 100%;
+    margin-top: 25px;
+    color : #fff;
+    background-color: #2e86de;
+    font-size: 16px;
+    border : 0;
+    padding:10px;
+    font-weight: 600;
+    border-radius: 5px;
+}
+/*DESCRIPTION*/
+.description{
+    flex:1;
+    padding:20px;
+    display: flex;
+    background-color: #fff;
+    flex-direction: column;
+    overflow-y: scroll; /*To scroll down and see the information*/
+}
+.description h3{
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+.trans{
+    list-style:none;
+}
+
+.trans li{
+    background-color: #fff;
+    color:#333;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,rgba(27,31, 35, 0.15) 0px 0px 0px 1px;
+    padding: 10px;
+    margin:10px 0px;
+    display: flex;
+    justify-content: space-between;
+    position : relative;/*For button*/
+    cursor: pointer;
+}
+.trans li.inc{
+    border-left: 5px solid #1dd1a1;
+}
+.trans li.exp{
+    border-left: 5px solid #ee5253;
+}
+.btn-close{
+    position: absolute;
+    right:-10px;
+    top:-10px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    font-weight: 600;
+    color : #fff;
+    background-color: #e74c3c;
+    border : none;
+    cursor : pointer;
+    line-height: 20px;
+    opacity: 0; /*To make the button invisible*/
+}
+.trans li:hover .btn-close{
+    opacity:1;/*To make visible of close button*/
+}
+/*For scroll bar looks nice*/
+::-webkit-scrollbar{
+    width: 5px;
+}
+::-webkit-scrollbar-track{
+    background-color: #f1f1f1;
+}
+::-webkit-scrollbar-thumb{
+    background-color: #2e86de;
+    border-radius: 10px;  
+}
+/*Make the website responsive*/
+
+@media only screen and  (max-width : 768px){
+    .toggle{
+        display: flex;
+    }
+    .container{
+        flex-direction: column;
+        margin: auto 40px;
+    }
+    .description{
+        display: none;   
+    }
+}
+@media only screen and (max-width : 480px){
+    .container{
+        margin: 30px 20px;
+    }
+    .inex-box p{
+        font-size: 18px;
+    }
+}
+

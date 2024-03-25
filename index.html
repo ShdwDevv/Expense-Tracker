@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- <meta name="viewport" content = "width=device-width"> -->
+        <link rel="stylesheet" href="./css/style.css">
+    </head>
+    <body>
+        <div class="toggle">
+            <div class="headline word" id="home">
+                <p>Account</p>
+            </div>
+            <div class="headline" id="history" >
+                <p>Description</p>
+            </div>
+        </div>
+        <section>
+            <div class="container">
+                <div class="display" id="display">
+                    <h2>EXPENSE TRACKER</h2>
+                    <h4>Your Balance</h4>
+                    <h1 id="balance">₹ 0.00</h1>
+                    <div class="inex-box">
+                        <div class="income">
+                            <h4>INCOME</h4>
+                            <p id="in-amt" class="amt add">₹ 0.00</p>
+                        </div>
+                        <div class="expense">
+                            <h4>EXPENSE</h4>
+                            <p id="ex-amt" class="amt subtract">₹ 0.00</p>
+                        </div>
+                    </div>
+                    <form action="#" id="form">
+                        <div class="form-control">
+                            <label for="description">Description</label>
+                            <input type="text" name="desc" id="desc" placeholder="Enter Description">
+                        </div>
+                        <div class="form-control">
+                            <label for="amount">Amount</label>
+                            <input type="number" name="amount" id="amount" placeholder="Enter you Amount">
+                        </div>
+                        <button class="btn" type="submit">Add Transaction</button>
+                    </form>
+                </div>
+                <div class="description" id="description">
+                    <h3>Transaction Details</h3>
+                    <ul class="trans" id="trans">
+                        <!-- <li class="exp">
+                            Insurance
+                            <span>-1500</span>
+                            <button class="btn-close">X</button>
+                        </li>
+                        <li class="inc">
+                            Salary
+                            <span>25500</span>
+                            <button class="btn-close">X</button>
+                        </li>
+                        <li class="inc">
+                            Salary
+                            <span>25500</span>
+                            <button class="btn-close">X</button>
+                        </li>
+                        <li class="inc">
+                            Salary
+                            <span>25500</span>
+                            <button class="btn-close">X</button>
+                        </li> -->
+                        
+                    </ul>
+                </div>
+            </div>
+        </section>
+        
+        <script src="./js/script.js"></script>
+    </body>
+</html>
